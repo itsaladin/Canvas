@@ -160,10 +160,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Rubik',
     fontSize: wp('4%'), // Approx 16px on most screens
     fontWeight: '400',
-    lineHeight: hp('2%'), // Approx 14px
-    textAlign: 'right',
-    textDecorationLine: 'underline', // Supported alternative
-    textDecorationStyle: 'solid',
+    lineHeight: hp('2%'),
   },
   subHeader: {
     marginBottom: 15,
@@ -238,10 +235,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins',
     fontSize: wp('3.5%'), // Responsive font size (approx 12px)
     fontWeight: '400',
-    lineHeight: hp('1.4%'), // Responsive line-height (approx 10.5px)
-
-    textDecorationLine: 'underline', // For underline
-    textDecorationStyle: 'solid',
+    lineHeight: hp('1.4%'),
   },
   footer: {
     flex: 1,
@@ -308,9 +302,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins',
     fontSize: wp('3.5%'), // Responsive font size (approx 12px)
     fontWeight: '400',
-    lineHeight: hp('1.4%'), // Responsive line-height (approx 10.5px)
-    textDecorationLine: 'underline', // For underline
-    textDecorationStyle: 'solid',
+    lineHeight: hp('1.4%'),
   },
   scoreText: {
     fontSize: 16,
