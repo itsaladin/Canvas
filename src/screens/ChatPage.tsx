@@ -77,11 +77,11 @@ const ChatPage = () => {
             ]}>
             {!msg.user && (
               <Image
-                source={{
-                  uri: msg.user
-                    ? 'https://picsum.photos/123'
-                    : 'https://picsum.photos/1234',
-                }}
+                source={
+                  msg.user
+                    ? require('../assets/pro1.png')
+                    : require('../assets/pro2.png')
+                }
                 style={styles.profilePic}
               />
             )}
@@ -102,11 +102,11 @@ const ChatPage = () => {
             </View>
             {msg.user && (
               <Image
-                source={{
-                  uri: msg.user
-                    ? 'https://picsum.photos/123'
-                    : 'https://picsum.photos/1234',
-                }}
+                source={
+                  msg.user
+                    ? require('../assets/pro1.png')
+                    : require('../assets/pro2.png')
+                }
                 style={styles.profilePicRight}
               />
             )}

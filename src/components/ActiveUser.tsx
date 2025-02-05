@@ -11,13 +11,13 @@ const UserCard = () => {
         </TouchableOpacity>
         <View style={styles.userImages}>
           {[
-            'https://picsum.photos/40',
-            'https://picsum.photos/41',
-            'https://picsum.photos/42',
-            'https://picsum.photos/43',
+            require('../assets/ball.png'),
+            require('../assets/rec.png'),
+            require('../assets/pro.png'),
+            require('../assets/rec.png'),
           ].map((uri, index) => (
             <View key={index} style={styles.userContainer}>
-              <Image source={{uri}} style={styles.profileImage} />
+              <Image source={uri} style={styles.profileImage} />
               <View style={styles.activeDot} />
             </View>
           ))}

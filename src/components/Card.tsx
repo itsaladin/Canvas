@@ -114,7 +114,7 @@ const Card = ({navigation}) => {
 
       <Divider />
       <View style={styles.footer}>
-        <View style={{paddingLeft: 20, paddingVertical: 10}}>
+        <View style={styles.footerLeft}>
           <View style={styles.row}>
             <Icon name="water-outline" size={16} color="#145E94" />
             <Text style={styles.infoText}>25% Precipitation</Text>
@@ -148,8 +148,8 @@ const styles = StyleSheet.create({
     borderColor: '#EEEEEE',
     borderWidth: 1,
     width: wp('90%'), // Responsive width, approx 350px on a typical screen
-    height: hp('34%'), // Responsive height, approx 238px
     borderRadius: wp('2%'), // Proportional for 8px-like effect
+    flex: 1, // Allow the card to grow dynamically
   },
   header: {
     flexDirection: 'row',
@@ -196,11 +196,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 10,
   },
-  userVSContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: 'gray',
-  },
   vsText: {
     color: '#145E94',
     marginBottom: 40,
@@ -234,16 +229,19 @@ const styles = StyleSheet.create({
     color: '#B0AAAA',
     textAlign: 'center',
     marginTop: 2,
-
     fontFamily: 'Poppins',
     fontSize: wp('3.5%'), // Responsive font size (approx 12px)
     fontWeight: '400',
     lineHeight: hp('1.4%'),
   },
   footer: {
-    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    // paddingVertical: hp('1%'), // Responsive padding
+  },
+  footerLeft: {
+    paddingLeft: wp('5%'), // Responsive padding
   },
   row: {
     flexDirection: 'row',
@@ -253,24 +251,24 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 50,
-    height: '100%',
+    paddingHorizontal: wp('10%'), // Responsive padding
+    height: hp('6%'), // Responsive height
   },
   chatButtonText: {
     color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
+    fontSize: wp('4%'), // Responsive font size
+    fontWeight: 'bold', // Responsive padding
   },
   player: {
     flexDirection: 'column',
     alignItems: 'center',
   },
   profileContainer: {
-    position: 'relative', // Required for absolute positioning of child elements
-    width: 60, // Match the size of the profile picture
-    height: 60, // Match the size of the profile picture
-    alignItems: 'center', // Center the profile picture
-    justifyContent: 'center', // Center the profile picture
+    position: 'relative',
+    width: 60,
+    height: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   outlinedBorder: {
     borderColor: '#4774AD',
@@ -287,9 +285,9 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     position: 'absolute',
-    bottom: 0, // Align to the bottom
-    right: 0, // Align to the right
-    zIndex: 1, // Ensure it appears on top of the profile picture
+    bottom: 0,
+    right: 0,
+    zIndex: 1,
   },
   playerName: {
     fontFamily: 'Rubik',
